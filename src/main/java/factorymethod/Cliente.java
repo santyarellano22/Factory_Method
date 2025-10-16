@@ -1,7 +1,12 @@
 public class Cliente {
-    private String cedula;   
-    private String nombre;   
+    private String cedula;   // Número de identificación del cliente
+    private String nombre;   // Nombre completo del cliente
 
+    /**
+     * Constructor para crear un nuevo cliente
+     * @param cedula Número de identificación del cliente
+     * @param nombre Nombre completo del cliente
+     */
     public Cliente(String cedula, String nombre) {
         this.cedula = cedula;
         this.nombre = nombre;

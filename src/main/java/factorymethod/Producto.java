@@ -1,5 +1,10 @@
+/**
+ * Clase abstracta base para todos los productos del sistema.
+ * Esta clase forma parte del patrón Factory Method como Product abstracto.
+ * Define la estructura común que deben tener todos los productos.
+ */
 public abstract class Producto {
-    protected int numero; 
+    protected int numero;    // Identificador único del producto
 
     /**
      * Constructor base para todos los productos
@@ -8,6 +13,11 @@ public abstract class Producto {
     public Producto(int numero) {
         this.numero = numero;
     }
+
+    /**
+     * Obtiene el número identificador del producto
+     * @return número identificador del producto
+     */
     public int getNumero() {
         return numero;
     }

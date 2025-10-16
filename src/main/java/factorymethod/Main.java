@@ -1,8 +1,12 @@
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-
+/**
+ * Clase principal que demuestra el uso del patrón Factory Method.
+ * Permite al usuario crear productos y pedidos de manera interactiva.
+ */
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
@@ -42,7 +46,7 @@ public class Main {
         Cliente cliente = new Cliente(cedula, nombre);
         Pedido pedido = new Pedido(cliente, numeroTarjeta);
 
-        // Menú de productos
+        
         while (true) {
             System.out.println("\n-- Agregar Producto --");
             System.out.println("1. Agregar Impresión");
@@ -67,7 +71,7 @@ public class Main {
             }
         }
 
-        // Mostrar el pedido final
+        
         System.out.println("\n=== RESUMEN DEL PEDIDO ===");
         pedido.mostrarPedido();
     }
@@ -76,7 +80,7 @@ public class Main {
         System.out.println("\n-- Nueva Impresión --");
         System.out.print("Ingrese el número de impresión: ");
         int numero = scanner.nextInt();
-        scanner.nextLine(); 
+        scanner.nextLine(); // Limpiar el buffer
 
         System.out.print("Ingrese el tipo de color (ej: Full Color): ");
         String color = scanner.nextLine();

@@ -2,35 +2,33 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Clase que representa un pedido en el sistema.
- * Contiene la información del cliente, los productos solicitados,
- * la fecha del pedido y la información de pago.
- */
+
 public class Pedido {
-    private Cliente cliente;                   
+    
+    private Cliente cliente;                    
     private List<Producto> productos = new ArrayList<>();  // Lista de productos en el pedido
     private Date fecha;                         // Fecha en que se realiza el pedido
     private int numeroTarjetaCredito;          
 
-    
+    /**
+     * Constructor que inicializa un nuevo pedido.
+     * @param cliente El cliente que realiza el pedido
+     * @param numeroTarjetaCredito Número de tarjeta para procesar el pago
+     */
     public Pedido(Cliente cliente, int numeroTarjetaCredito) {
         this.cliente = cliente;
         this.numeroTarjetaCredito = numeroTarjetaCredito;
         this.fecha = new Date();  // Se establece automáticamente la fecha actual
     }
 
+    /**
+     * Agrega un nuevo producto al pedido.
+     * @param p El producto a agregar a la lista de productos
+     */
     public void agregarProducto(Producto p) {
         productos.add(p);
     }
 
-    /**
-     * Muestra los detalles completos del pedido:
-     * - Información del cliente
-     * - Fecha del pedido
-     * - Últimos 4 dígitos de la tarjeta
-     * - Lista de productos y sus detalles
-     */
     public void mostrarPedido() {
         System.out.println("---- Pedido ----");
         System.out.println("Cliente: " + cliente.getNombre() + " (C.C. " + cliente.getCedula() + ")");

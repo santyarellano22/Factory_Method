@@ -7,10 +7,15 @@ import java.util.List;
  * Implementa la funcionalidad específica para manejar impresiones de fotos.
  */
 public class Impresion extends Producto {
-    private String color;        
-    private List<Foto> fotos;    
+    private String color;        // Tipo de color para la impresión
+    private List<Foto> fotos;    // Colección de fotos asociadas a la impresión
 
-
+    /**
+     * Constructor para crear una nueva impresión
+     * @param numero Identificador único de la impresión
+     * @param color Tipo de color seleccionado para la impresión
+     * @param fotos Lista de fotos a imprimir, puede ser null
+     */
     public Impresion(int numero, String color, List<Foto> fotos) {
         super(numero);
         this.color = color;
@@ -33,6 +38,7 @@ public class Impresion extends Producto {
             }
         }
     }
+
 
     public void imprimirTodas() {
         for (Foto f : fotos) f.print();

@@ -6,11 +6,16 @@ import java.util.List;
  * Esta clase es parte del patrón Factory Method como ConcreteCreator.
  */
 public class CreadorImpresion extends CreadorProducto {
-    private int numero;          
-    private String color;        
-    private List<Foto> fotos;    
+    private int numero;          // Número identificador de la impresión
+    private String color;        // Tipo de color para la impresión
+    private List<Foto> fotos;    // Lista de fotos a imprimir
 
-
+    /**
+     * Constructor que inicializa los datos necesarios para crear una impresión
+     * @param numero Identificador único de la impresión
+     * @param color Tipo de color para la impresión (ej: "Full Color", "Blanco y Negro")
+     * @param fotos Lista de fotos que se incluirán en la impresión
+     */
     public CreadorImpresion(int numero, String color, List<Foto> fotos) {
         this.numero = numero;
         this.color = color;

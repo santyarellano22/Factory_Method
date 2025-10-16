@@ -7,6 +7,12 @@ public class Camara extends Producto {
     private String marca;    
     private String modelo;   
 
+    /**
+     * Constructor para crear una nueva cámara
+     * @param numero Identificador único de la cámara
+     * @param marca Marca de la cámara 
+     * @param modelo Modelo específico de la cámara
+     */
     public Camara(int numero, String marca, String modelo) {
         super(numero);
         this.marca = marca;
