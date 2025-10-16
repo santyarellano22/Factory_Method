@@ -1,6 +1,6 @@
 public class Cliente {
-    private String cedula;   // Número de identificación del cliente
-    private String nombre;   // Nombre completo del cliente
+    private String cedula;   
+    private String nombre;   
 
     /**
      * Constructor para crear un nuevo cliente

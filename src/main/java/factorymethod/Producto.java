@@ -4,7 +4,7 @@
  * Define la estructura común que deben tener todos los productos.
  */
 public abstract class Producto {
-    protected int numero;    // Identificador único del producto
+    protected int numero;    
 
     /**
      * Constructor base para todos los productos

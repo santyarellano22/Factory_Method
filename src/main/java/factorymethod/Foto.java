@@ -4,7 +4,7 @@
  * Mantiene la información del archivo de la foto y proporciona funcionalidad básica de impresión.
  */
 public class Foto {
-    private String fichero;    // Nombre del archivo que contiene la foto
+    private String fichero;    
 
     /**
      * Constructor que inicializa una nueva foto
